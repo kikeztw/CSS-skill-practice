@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container-fluid box">
+    <div class="row ux">
+        <div class="col-12 top">
+          <h1>OUR Team</h1>
+          <p>Lorem ipsum dolor sit amet consectetur  <br> adipisicing elit. Nostrum, animi.</p>
+        </div> 
+        <div class="col-3 d-flex justify-content-center">
+          <h3 >programmer</h2>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <h3 class="cm">community manager</h2>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <h3 class="wd">web developer</h2>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <h3 class="gd">graphic design</h3>
+        </div>
+        
+      
+    </div>
+    <div class="row full-screen no-gutters">
+      
+      <div class="col-3 hover-screen">
+          <h2>Nombre NOMBRE</h2>
+      </div>
+      <div class="col-3 hover-screen">
+        <h2>Nombre</h2>
+      </div>
+      <div class="col-3 hover-screen">
+        <h2>Nombre</h2>
+      </div>
+      <div class="col-3 hover-screen">
+        <h2>Nombre</h2>
+      </div>
+    </div>
+    <div class="row no-gutters team-inf d-flex justify-content-center align-items-center" id="team-inf">
+       <span class="close-icon" id="close">X</span>
+      <div class="col-5 img-container">
+        <img src="https://images.pexels.com/photos/888956/pexels-photo-888956.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="img-fluid">
+      </div>
+      <div class="col-4 team-inf-container">   
+          <h3>AYAKKABI</h3>
+          <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, commodi.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    let team = document.getElementById("team-inf");
+    let Hscreen = document.getElementsByClassName("hover-screen")[0];
+    console.dir(Hscreen);
+    document.addEventListener("click", element =>{
+          console.dir(element)
+        if(element.target.className.includes("hover-screen")){
+            team.style.transform = "translate(0, 0%) "
+        }
+    if(element.target.id === "close"){
+      
+        team.style.transform = "translate(0, 100%) "
+      
+    } 
+    })
+  </script>
+</body>
+</html>
